@@ -1,0 +1,32 @@
+¿Qué es react? Es una bibloteca de javascript de codigo abierto diseñada para crear interfaces de usuarios.
+Bibloteca: conjunto de implementaciones (herramientas) que podemos usar en nuestro codigo.
+Ventajas: facil de aprender y usar, componentes reutilizables, crear aplicaciones dinamicas, buen desempeño.
+
+Conceptos Básicos:
+Componente: Parte de la interfaz de usuario que es independiente y reusable. Los componentes actuan como bloques. Estan los componentes "Funcionales" y "De Clase".
+
+Componente Funcional: funcion de JS que retorna un elemento de React(jsx). Ej:
+function Saludo(props){
+    return <h1>¡Hola, {props.nombre}!</h1>;
+}
+Caracteristicas importantes: Debe retornar un elemento de react - Su nombre debe empezar con Mayusculo - Puede recibir valores si es necesario.
+
+Props = "propiedades": Son argumentos que puede recibir un componente de react. Similar a una funcion en javascript.
+Los props solo pueden ser enviados de padres a hijos.
+
+Componente de clase: clase de javascript moderno, que retorna un elemento jsx. Ej:
+class Saludo extends React.Component {
+    render(){
+    return <h1>¡Hola, {this.props.nombre}!</h1>;
+    }
+}
+Caracteristicas importantes: Debe extender React.Component. - Debe tener un metodo render() para retornar un elemento jsx - puede recibir valores si es necesario.
+
+Estado: Representacion en JS del conjunto de propiedades de un compoentne y sus valores actuales.
+
+Hooks (anzuelos o ganchos): Permiten usar el estado y otras Caracteristicas de react sin escribir una clase. Lo asignan y actualizan.
+Es una funcion especial que permite trabajar con estados de componentes Funcionales y otros aspectos de react.
+
+Event Listener: funcion en JS que es ejecutada cuando ocurre un evento especifico.
+
+Ya vimos: Componente, props, estado, hooks, y event listener.
