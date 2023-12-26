@@ -96,3 +96,13 @@ let adjetivo = "interesante";
 
 let nombre = "gino";
 <p>Su nombre es {nombre.toUpperCase()}</p>
+
+Crear proyecto 2 opciones:
+curso: npx create-react-app mi-app
+vite: npm crate vite@latest
+
+Para correr la del curso entramos a la carpeta del proyecto, npm star
+Para correr la de vite entramos a la carpeta del proyecto, npm run dev
+
+package.json: Notacion de objetos de javascript
+src: source (fuente o contenedor principal)
