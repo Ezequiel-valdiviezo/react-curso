@@ -30,3 +30,69 @@ Es una funcion especial que permite trabajar con estados de componentes Funciona
 Event Listener: funcion en JS que es ejecutada cuando ocurre un evento especifico.
 
 Ya vimos: Componente, props, estado, hooks, y event listener.
+
+Instalar node, que es un entorno de ejecucion para js. Nos permite ejecutar js fuera de un browser. Gracias node podemos ejecutarlo en visual studio code.
+
+
+Introduccion a jsx
+Es una extension de react para la sintaxis en js. Nos permite describir en js como se veran los componentes usando una estructura similar a html.
+Ventajas: Estructura mas facil de visualizar. Errores y advertencias mas utiles. Jsx es opcionales pero es lo recomendado.
+
+Elemento: unidades mas pequeñas en react. Definen lo que se ve en la pantalla.
+
+Elementos vs componentes
+Los componentes en react estan "hechos" de elementos.
+
+React Dom, paquete que facilita la interaccion y actualizacion del DOM en aplicaciones de react.
+
+DOM: document objet model. Representacion en el navegador de todos los elementos que conforman nuestra pagina web.
+
+Elementos: con jsx puedes crear y usar cualquier elemento HTML (div, img, a ,header, nav, p, h1, buttom)
+¿Como reconocerlo? en base a sus etiquetas, y que estan en minuscula, y color diferente. Los componentes estan en letra Mayuscula la primera letra.
+
+Atributos: Puedes agregar atributos a los elementos en jsx para especificar ciertas Caracteristicas(clases, estilos, id). Algunos se escriben de forma distinta. 
+HTML: class=""
+REACT: className=""
+
+class es una palabra reservada en javascript que podemos usar para crear una clase. Por eso necesitamos escribir este atributo de forma distinta en jsx.
+for (asignar un label a cietos elementos)
+HTML: for=""
+REACT: htmlFor=""
+
+El atributo style acepta un objeto JS con propieades CSS escritas en camelCase.
+background-image -> backgroundImage
+background-color -> backgroundColor
+font-family -> fontFamily
+
+const estiloDiv = {
+    color: 'yellow',
+    backgroundColor: 'black'
+};
+<div style{estiloDiv}> ¡Hola, mundo!</div> Llamamos al objeto para darle los estilos
+<div style{{color: 'yellow'}}> ¡Hola, mundo!</div> Aca ponemos los valores al style directo con doble llave. Las primeras llaves permiten insertar JS. Las de dentro nos permiten definir un objeto de js directamente en esa linea, y se usa una sola vez.
+
+referencia atributos: https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+
+Al igual que html, los elementos pueden ser anidados en jsx para formar estructuras más complejas.
+
+Renderizar componentes:
+const elemento = <h1>¡Hola, mundo!</h1>;
+ReactDom.render(
+    elemento,
+    document.getElementById('root)
+);
+
+ReactDom: no podemos usarlo sino que necesitamos importarlo:
+import ReactDom from 'react-dom';
+
+Self-closing  tag: elemento que solo posee un elementos de apertura ya que no contiene texto u otros elementos.
+ej: <img src="logo.png" alt="mi imagen" />
+
+Javascript en jsx: {js}
+let adjetivo = "interesante";
+<p>React es {adjetivo}</p>
+
+<p>El resultado es {5 * 6}</p>
+
+let nombre = "gino";
+<p>Su nombre es {nombre.toUpperCase()}</p>
